@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app_cookbook/Animation/main.dart';
+import 'package:flutter_app_cookbook/Drawer/main.dart';
 
 void main() => runApp(MyApp());
 
@@ -21,7 +22,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: MyAnimationPage(),
+      home: DrawerPage(),
     );
   }
 }
