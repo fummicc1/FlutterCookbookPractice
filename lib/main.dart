@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app_cookbook/Animation/main.dart';
-import 'package:flutter_app_cookbook/Drawer/main.dart';
-import 'package:flutter_app_cookbook/SnackBar/main.dart';
-import 'package:flutter_app_cookbook/UIOrientation/main.dart';
-import 'package:flutter_app_cookbook/TabBar/main.dart';
+import 'animation/main.dart';
+import 'drawer/main.dart';
+import 'snack_bar/main.dart';
+import 'ui_orientation/main.dart';
+import 'tabbar/main.dart';
+import 'form_validator/main.dart';
 
 void main() => runApp(MyApp());
 
@@ -25,7 +26,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: TabBarPage(),
+      home: FormValidatePage(),
     );
   }
 }
