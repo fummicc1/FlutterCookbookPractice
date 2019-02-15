@@ -6,6 +6,10 @@ class ShowSnackBarPage extends StatefulWidget {
 }
 
 class _ShowSnackBarPageState extends State<ShowSnackBarPage> {
+
+  final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
+
+
   void _showSnackBar() {
     final snackBar = SnackBar(
       content: Text("this is a sample for snackBar"),
@@ -15,13 +19,16 @@ class _ShowSnackBarPageState extends State<ShowSnackBarPage> {
             print("dismiss");
           }),
     );
-    
-    Scaffold.of(context).showSnackBar(snackBar);
+
+    _scaffoldKey.currentState.showSnackBar(snackBar);
+
+//    Scaffold.of(context).showSnackBar(snackBar); NO Scaffold Under init floatingActionButton.
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      key: _scaffoldKey,
       appBar: AppBar(
         title: Text("snackBar Demo"),
       ),
