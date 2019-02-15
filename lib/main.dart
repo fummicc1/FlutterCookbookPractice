@@ -1,10 +1,6 @@
 import 'package:flutter/material.dart';
-import 'animation/main.dart';
-import 'drawer/main.dart';
-import 'snack_bar/main.dart';
-import 'ui_orientation/main.dart';
-import 'tabbar/main.dart';
 import 'form_validator/main.dart';
+import 'ui_orientation/main.dart';
 
 void main() => runApp(MyApp());
 
