@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'form_validator/main.dart';
+import 'ripple/main.dart';
 import 'ui_orientation/main.dart';
 
 void main() => runApp(MyApp());
@@ -22,7 +23,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: FormValidatePage(),
+      home: RipplePage(),
     );
   }
 }
