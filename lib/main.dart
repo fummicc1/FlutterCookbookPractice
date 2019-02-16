@@ -3,6 +3,7 @@ import 'form_validator/main.dart';
 import 'ripple/main.dart';
 import 'ui_orientation/main.dart';
 import 'handle_tap/main.dart';
+import 'swipe_dismiss/main.dart';
 
 void main() => runApp(MyApp());
 
@@ -24,7 +25,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: HandlingTapPage(),
+      home: SwipeDismissPage(),
     );
   }
 }
