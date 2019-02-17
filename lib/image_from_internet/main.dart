@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:transparent_image/transparent_image.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 
 class ImageSessionPage extends StatefulWidget {
   @override
@@ -20,7 +21,7 @@ class _ImageSessionPageState extends State<ImageSessionPage> {
             FadeInImage.memoryNetwork(placeholder: kTransparentImage, image: 'https://picsum.photos/250?image=9')
           ],
         ),
-      )
+      ),
     );
   }
 }
@@ -41,3 +42,25 @@ class _ImageSessionPageState extends State<ImageSessionPage> {
 //  }
 //}
 
+
+class CachedImageSessionPage extends StatefulWidget {
+  @override
+  _CachedImageSessionPageState createState() => _CachedImageSessionPageState();
+}
+
+class _CachedImageSessionPageState extends State<CachedImageSessionPage> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("キャッシュ表示"),
+      ),
+      body: Center(
+        child: CachedNetworkImage(
+          placeholder: CircularProgressIndicator(),
+          imageUrl: 'https://picsum.photos/250?image=9',
+        ),
+      ),
+    );
+  }
+}
