@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:transparent_image/transparent_image.dart';
 
 class ImageSessionPage extends StatefulWidget {
   @override
@@ -13,8 +14,30 @@ class _ImageSessionPageState extends State<ImageSessionPage> {
         title: Text("写真をインターネットでダウンロード"),
       ),
       body: Center(
-        child: Image.network('https://picsum.photos/250?image=9'), // this also supports gif animations.
-      ),
+        child: Column(
+          children: <Widget>[
+            Image.network('https://picsum.photos/250?image=9'),
+            FadeInImage.memoryNetwork(placeholder: kTransparentImage, image: 'https://picsum.photos/250?image=9')
+          ],
+        ),
+      )
     );
   }
 }
+
+// this also supports gif animations.
+//// Imageはローカルのアセットからでも取得できる。
+//class AssetImagePage extends StatefulWidget {
+//  @override
+//  _AssetImagePageState createState() => _AssetImagePageState();
+//}
+//
+//class _AssetImagePageState extends State<AssetImagePage> {
+//  @override
+//  Widget build(BuildContext context) {
+//    return Container(
+//      child: FadeInImage.assetNetwork(placeholder: null, image: null),
+//    );
+//  }
+//}
+
