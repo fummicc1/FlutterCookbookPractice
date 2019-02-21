@@ -7,6 +7,7 @@ import 'swipe_dismiss/main.dart';
 import 'image_from_internet/main.dart';
 import 'swipe_dismiss/main.dart';
 import 'basic_list/main.dart';
+import 'horizontal_list/main.dart';
 
 void main() => runApp(MyApp());
 
@@ -28,7 +29,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: BasicListPage(),
+      home: HorizontalListPage(),
     );
   }
 }
